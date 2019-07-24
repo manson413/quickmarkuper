@@ -454,8 +454,33 @@ p
 
 .input-wrapper
 {
+    position: relative;
+
     max-width: 500px;
     margin-bottom: 15px;
+    padding-top: 18px;
+}
+.input-wrapper:hover .input-title
+{
+    color: #000;
+}
+.input-wrapper:hover .border-input
+{
+    border-color: #c3c3c3;
+}
+.input-wrapper .input-title
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.input-wrapper.input-select
+{
+    padding-top: 0;
+}
+.input-wrapper.input-select .input-title
+{
+    position: static;
 }
 
 .input-title
@@ -468,6 +493,28 @@ p
     margin-bottom: 5px; 
 
     color: #6d6e71;
+}
+
+.border-input
+{
+    font-size: 16px;
+    line-height: 1;
+
+    width: 100%;
+    max-width: 365px; 
+    padding: 5px 0;
+
+    border: none;
+    border-bottom: 2px solid #ddd;
+}
+.border-input:focus
+{
+    border-color: #c3c3c3; 
+    outline: none;
+}
+.border-input:focus ~ .input-title
+{
+    color: #000;
 }
 
 /* -------- END INPUTS -------- */
@@ -486,3 +533,7 @@ p
 }
 
 /* -------- END NICE SELECT --------- */
+.footer
+{
+    padding: 50px 0;
+}

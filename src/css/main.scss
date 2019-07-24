@@ -193,6 +193,27 @@ p {
 .input-wrapper {
   max-width: 500px;
   margin-bottom: 15px;
+  position: relative;
+  padding-top: 18px;
+  &:hover {
+    .input-title {
+      color: #000;
+    }
+    .border-input {
+      border-color: #c3c3c3;
+    }
+  }
+  .input-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &.input-select {
+    padding-top: 0;
+    .input-title {
+      position: static;
+    }
+  }
 }
 .input-title {
   display: block;
@@ -200,6 +221,22 @@ p {
   line-height: 16px;
   color: #6d6e71;
   margin-bottom: 5px;
+}
+.border-input {
+  font-size: 16px;
+  line-height: 1;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  max-width: 365px;
+  &:focus {
+    outline: none;
+    border-color: #c3c3c3;
+    & ~.input-title {
+      color: #000;
+    }
+  }
 }
 /* -------- END INPUTS -------- */
 
@@ -219,3 +256,7 @@ p {
 }
 
 /* -------- END NICE SELECT --------- */
+
+.footer {
+  padding: 50px 0;
+}
