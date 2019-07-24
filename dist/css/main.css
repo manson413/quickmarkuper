@@ -1,0 +1,488 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+input,
+textarea,
+button,
+select,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+    font: inherit;
+    font-size: 100%;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: none;
+    outline: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited
+{
+    text-decoration: none;
+
+    color: inherit;
+    outline: none;
+}
+
+button,
+button:hover,
+button:focus
+{
+    cursor: pointer; 
+
+    outline: none;
+}
+
+a,
+button
+{
+    -webkit-transition: .3s ease;
+         -o-transition: .3s ease;
+            transition: .3s ease;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section
+{
+    display: block;
+}
+
+body
+{
+    line-height: 1;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
+
+blockquote,
+q
+{
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+    content: '';
+    content: none;
+}
+
+table
+{
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
+@font-face
+{
+    font-family: 'proxima_novabold';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('../fonts/proximanova-bold-webfont.eot');
+    src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-bold-webfont.woff') format('woff'), url('../fonts/proximanova-bold-webfont.ttf') format('truetype'), url('../fonts/proximanova-bold-webfont.svg#proxima_novabold') format('svg');
+}
+
+@font-face
+{
+    font-family: 'proxima_novalight_italic';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('../fonts/proximanova-lightit-webfont.eot');
+    src: url('../fonts/proximanova-lightit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-lightit-webfont.woff') format('woff'), url('../fonts/proximanova-lightit-webfont.ttf') format('truetype'), url('../fonts/proximanova-lightit-webfont.svg#proxima_novalight_italic') format('svg');
+}
+
+@font-face
+{
+    font-family: 'proxima_novaregular';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('../fonts/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proximanova-regular-webfont.ttf') format('truetype'), url('../fonts/proximanova-regular-webfont.svg#proxima_novaregular') format('svg');
+}
+
+*,
+*:before,
+*:after
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+input
+{
+    min-width: 1px;
+}
+
+a:focus,
+input:focus,
+button:focus
+{
+    outline: 1px solid lightblue;
+}
+
+body
+{
+    font-family: 'proxima_novaregular', sans-serif; 
+    font-size: 16px;
+    line-height: 1.5;
+
+    min-width: 320px;
+
+    color: #000;
+    background: #fff;
+}
+
+html,
+body
+{
+    height: 100%;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg
+{
+    display: block;
+}
+
+ol
+{
+    margin-bottom: 15px; 
+
+    list-style: circle;
+    list-style-position: inside;
+}
+
+ul
+{
+    margin-bottom: 15px; 
+
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.visually-hidden
+{
+    position: absolute;
+
+    overflow: hidden; 
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+    padding: 0;
+
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+{
+    font-family: 'proxima_novabold', sans-serif;
+}
+
+b,
+strong
+{
+    font-family: 'proxima_novabold', sans-serif;
+}
+
+p
+{
+    margin: 0 0 15px;
+}
+
+.container
+{
+    max-width: 1246px;
+    margin: 0 auto; 
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* -------- BUTTONS -------- */
+.btn
+{
+    font-family: 'proxima_novabold', sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s; 
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    border: none;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+.btn.light-btn
+{
+    color: #243244; 
+    background: #ffea2d;
+}
+.btn.light-btn:hover
+{
+    background: #f1e76e;
+}
+.btn.light-btn:active
+{
+    background: #cbba9e;
+}
+.btn.transparent-btn
+{
+    color: #576b87; 
+    border: 2px solid #576b87;
+    background: transparent;
+}
+.btn.transparent-btn:hover
+{
+    color: #fff; 
+    border-color: #3d616f;
+    background: #3d616f;
+}
+.btn.transparent-btn:active
+{
+    border-color: #112a42; 
+    background: #112a42;
+}
+
+/* -------- END BUTTONS -------- */
+/* -------- INPUTS -------- */
+.custom-input
+{
+    position: relative;
+
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display:         inline-flex;
+
+    margin-bottom: 15px; 
+    padding-left: 35px;
+
+    cursor: pointer;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.custom-input .new-input
+{
+    position: absolute;
+    top: 2px;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s; 
+
+    border: 1px solid #c1c1be;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+}
+.custom-input .new-input:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    content: '';
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s; 
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+    opacity: 0;
+    background: url(../img/check-solid.svg) no-repeat center/cover;
+}
+.custom-input:hover .new-input
+{
+    background: #c1c1be;
+}
+.custom-input .visually-hidden:checked ~ .new-input
+{
+    background: #d11515;
+}
+.custom-input .visually-hidden:checked ~ .new-input:before
+{
+    opacity: 1;
+}
+.custom-input .visually-hidden:focus ~ .custom-input-text
+{
+    outline: 1px solid lightblue;
+}
+.custom-input.custom-radio .new-input
+{
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+}
+.custom-input.custom-radio .new-input:before
+{
+    width: 10px;
+    height: 10px; 
+
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background: #fff;
+}
+
+.input-wrapper
+{
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+.input-title
+{
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block;
+
+    margin-bottom: 5px; 
+
+    color: #6d6e71;
+}
+
+/* -------- END INPUTS -------- */
+/* -------- NICE SELECT --------- */
+.nice-select .list
+{
+    height: 0;
+    margin: 0; 
+
+    list-style: none;
+}
+
+.nice-select.open .list
+{
+    height: auto;
+}
+
+/* -------- END NICE SELECT --------- */

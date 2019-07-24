@@ -1,0 +1,221 @@
+@import "reset";
+@import "fonts";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+input {
+  min-width: 1px;
+}
+a, input, button {
+  &:focus {
+    outline: 1px solid lightblue;
+  }
+}
+
+$yellow-color: #ffea2d;
+$grey-color: #c1c1be;
+$red-color: #d11515;
+
+body {
+  min-width: 320px;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'proxima_novaregular', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg {
+  display: block;
+}
+
+ol {
+  list-style: circle;
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+ul {
+  list-style: decimal;
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0;
+  border:0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'proxima_novabold', sans-serif;
+}
+b, strong {
+  font-family: 'proxima_novabold', sans-serif;
+}
+
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+.container {
+  max-width: 1246px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+/* -------- BUTTONS -------- */
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font-family: 'proxima_novabold', sans-serif;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 15px 35px;
+  border-radius: 3px;
+  border: none;
+  transition: all .3s;
+  &.light-btn {
+    background: $yellow-color;
+    color: #243244;
+    &:hover {
+      background: #f1e76e;
+    }
+    &:active {
+      background: #cbba9e;
+    }
+  }
+  &.transparent-btn {
+    background: transparent;
+    border: 2px solid #576b87;
+    color: #576b87;
+    &:hover {
+      background: #3d616f;
+      border-color: #3d616f;
+      color: #fff;
+    }
+    &:active {
+      background: #112a42;
+      border-color: #112a42;
+    }
+  }
+}
+
+/* -------- END BUTTONS -------- */
+
+/* -------- INPUTS -------- */
+
+.custom-input {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  .new-input {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $grey-color;
+    border-radius: 2px;
+    transition: all .3s;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/check-solid.svg)no-repeat center/cover;
+      opacity: 0;
+      transition: all .3s;
+    }
+  }
+  &:hover {
+    .new-input {
+      background: $grey-color;
+    }
+  }
+  .visually-hidden:checked ~.new-input {
+    background: $red-color;
+    &:before {
+      opacity: 1;
+    }
+  }
+  .visually-hidden:focus ~.custom-input-text{
+    outline: 1px solid lightblue;
+  }
+  &.custom-radio {
+    .new-input {
+      border-radius: 50%;
+      &:before {
+        border-radius: 50%;
+        background: #fff;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.input-wrapper {
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+.input-title {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6d6e71;
+  margin-bottom: 5px;
+}
+/* -------- END INPUTS -------- */
+
+/* -------- NICE SELECT --------- */
+
+.nice-select {
+  .list {
+    height: 0;
+    list-style: none;
+    margin: 0;
+  }
+  &.open {
+    .list {
+      height: auto;
+    }
+  }
+}
+
+/* -------- END NICE SELECT --------- */
