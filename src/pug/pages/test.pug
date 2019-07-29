@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="format-detection", content="telephone=no")
+        title Test task
+        link(rel='stylesheet', href='css/nice-select.css')
+        link(rel='stylesheet', href='css/main.css')
+    body
+        section.section-padding
+            .container
+                h1 Project
+                .custom-table.project-table
+                    .custom-table-row.title-row
+                        .custom-table-cell
+                            label.custom-input
+                                input(type="checkbox", name="check").visually-hidden
+                                span.new-input
+                        .custom-table-cell
+                            button(type="button").table-sort-btn #
+                        .custom-table-cell
+                            button(type="button").table-sort-btn Client
+                        .custom-table-cell
+                            button(type="button").table-sort-btn Status
+                    .custom-table-row
+                        .custom-table-cell
+                            label.custom-input
+                                input(type="checkbox", name="check").visually-hidden
+                                span.new-input
+                        .custom-table-cell(data-cell="#") Project #1723
+                        .custom-table-cell(data-cell="Client") Stella
+                        .custom-table-cell(data-cell="Status")
+                            .input-wrapper.input-select
+                                select.custom-select
+                                    option Sent
+                                    option Draft
+                    .custom-table-row
+                        .custom-table-cell
+                            label.custom-input
+                                input(type="checkbox", name="check").visually-hidden
+                                span.new-input
+                        .custom-table-cell(data-cell="#") Project #1720
+                        .custom-table-cell(data-cell="Client") IT corp international
+                        .custom-table-cell(data-cell="Status")
+                            .input-wrapper.input-select
+                                select.custom-select
+                                    option Draft
+                                    option Sent
+                .projects-wrapper
+                    .project-item-wrapper
+                        .project-item
+                            .item-icon
+                                img(src="img/item1.png")
+                            span.item-title Project #1
+                            .item-text Lorem ipsum dolor sit amet, consectetur.
+                    .project-item-wrapper
+                        .project-item
+                            .item-icon
+                                img(src="img/item2.png")
+                            span.item-title Project #2
+                            .item-text Lorem ipsum dolor sit amet, consectetur.
+                    .project-item-wrapper
+                        .project-item
+                            .item-icon
+                                img(src="img/item3.png")
+                            span.item-title Project #3
+                            .item-text Lorem ipsum dolor sit amet, consectetur.
+                    .project-item-wrapper
+                        .project-item
+                            .item-icon
+                                img(src="img/item4.png")
+                            span.item-title Project #4
+                            .item-text Lorem ipsum dolor sit amet, consectetur.
+
+                .form-block
+                    form
+                        fieldset
+                            legend Add project
+                            .double-input
+                                .input-wrapper
+                                    input(type="text", required="true").border-input
+                                    label.input-title Name:
+                                        span.required-star *
+                                .input-wrapper
+                                    input(type="text", required="true").border-input
+                                    label.input-title Client:
+                                        span.required-star *
+                            .double-input
+                                .input-wrapper
+                                    input(type="text", required="true").border-input
+                                    label.input-title E-mail:
+                                        span.required-star *
+                                .input-wrapper.input-select
+                                    label.input-title Admin:
+                                        span.required-star *
+                                    select.custom-select
+                                        option(selected="true", disabled="true")
+                                        option Admin
+                                        option user 1
+                                        option user 2
+                                        option user 3
+                            .btn-row
+                                button(type="button").btn.transparent-btn Cancel
+                                button(type="submit").btn.light-btn Add
+
+
+    script(src='/js/jquery.min.js')
+    script(src='/js/jquery.nice-select.min.js')
+    script(src='/js/main.js')

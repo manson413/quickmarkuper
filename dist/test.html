@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Test task</title>
+    <link rel="stylesheet" href="css/nice-select.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <section class="section-padding">
+      <div class="container">
+        <h1>Project</h1>
+        <div class="custom-table project-table">
+          <div class="custom-table-row title-row">
+            <div class="custom-table-cell">
+              <label class="custom-input">
+                <input class="visually-hidden" type="checkbox" name="check"/><span class="new-input"></span>
+              </label>
+            </div>
+            <div class="custom-table-cell">
+              <button class="table-sort-btn" type="button">#</button>
+            </div>
+            <div class="custom-table-cell">
+              <button class="table-sort-btn" type="button">Client</button>
+            </div>
+            <div class="custom-table-cell">
+              <button class="table-sort-btn" type="button">Status</button>
+            </div>
+          </div>
+          <div class="custom-table-row">
+            <div class="custom-table-cell">
+              <label class="custom-input">
+                <input class="visually-hidden" type="checkbox" name="check"/><span class="new-input"></span>
+              </label>
+            </div>
+            <div class="custom-table-cell" data-cell="#">Project #1723</div>
+            <div class="custom-table-cell" data-cell="Client">Stella</div>
+            <div class="custom-table-cell" data-cell="Status">
+              <div class="input-wrapper input-select">
+                <select class="custom-select">
+                  <option>Sent</option>
+                  <option>Draft</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="custom-table-row">
+            <div class="custom-table-cell">
+              <label class="custom-input">
+                <input class="visually-hidden" type="checkbox" name="check"/><span class="new-input"></span>
+              </label>
+            </div>
+            <div class="custom-table-cell" data-cell="#">Project #1720</div>
+            <div class="custom-table-cell" data-cell="Client">IT corp international</div>
+            <div class="custom-table-cell" data-cell="Status">
+              <div class="input-wrapper input-select">
+                <select class="custom-select">
+                  <option>Draft</option>
+                  <option>Sent</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects-wrapper">
+          <div class="project-item-wrapper">
+            <div class="project-item">
+              <div class="item-icon"><img src="img/item1.png"/></div><span class="item-title">Project #1</span>
+              <div class="item-text">Lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+          <div class="project-item-wrapper">
+            <div class="project-item">
+              <div class="item-icon"><img src="img/item2.png"/></div><span class="item-title">Project #2</span>
+              <div class="item-text">Lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+          <div class="project-item-wrapper">
+            <div class="project-item">
+              <div class="item-icon"><img src="img/item3.png"/></div><span class="item-title">Project #3</span>
+              <div class="item-text">Lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+          <div class="project-item-wrapper">
+            <div class="project-item">
+              <div class="item-icon"><img src="img/item4.png"/></div><span class="item-title">Project #4</span>
+              <div class="item-text">Lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-block">
+          <form>
+            <fieldset>
+              <legend>Add project</legend>
+              <div class="double-input">
+                <div class="input-wrapper">
+                  <input class="border-input" type="text" required="true"/>
+                  <label class="input-title">Name:<span class="required-star">*</span></label>
+                </div>
+                <div class="input-wrapper">
+                  <input class="border-input" type="text" required="true"/>
+                  <label class="input-title">Client:<span class="required-star">*</span></label>
+                </div>
+              </div>
+              <div class="double-input">
+                <div class="input-wrapper">
+                  <input class="border-input" type="text" required="true"/>
+                  <label class="input-title">E-mail:<span class="required-star">*</span></label>
+                </div>
+                <div class="input-wrapper input-select">
+                  <label class="input-title">Admin:<span class="required-star">*</span></label>
+                  <select class="custom-select">
+                    <option selected="true" disabled="true"></option>
+                    <option>Admin</option>
+                    <option>user 1</option>
+                    <option>user 2</option>
+                    <option>user 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="btn-row">
+                <button class="btn transparent-btn" type="button">Cancel</button>
+                <button class="btn light-btn" type="submit">Add</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.nice-select.min.js"></script>
+  <script src="/js/main.js"></script>
+</html>

@@ -283,17 +283,66 @@ ul
 
 h1,
 h2,
-h3,
 h4,
 h5
 {
     font-family: 'proxima_novabold', sans-serif;
+
+    margin-top: 0;
 }
 
 b,
 strong
 {
     font-family: 'proxima_novabold', sans-serif;
+}
+
+h1
+{
+    font-size: 30px;
+    line-height: 36px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+h2
+{
+    font-size: 24px;
+    line-height: 32px;
+
+    margin-bottom: 20px;
+}
+
+h3
+{
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-bottom: 12px;
+}
+
+h4
+{
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-bottom: 12px;
+}
+
+h5
+{
+    font-size: 18px;
+    line-height: 24px;
+
+    margin-bottom: 12px;
+}
+
+.section-padding
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 p
@@ -303,7 +352,7 @@ p
 
 .container
 {
-    max-width: 1246px;
+    max-width: 1010px;
     margin: 0 auto; 
     padding-right: 15px;
     padding-left: 15px;
@@ -346,6 +395,8 @@ p
 }
 .btn.transparent-btn
 {
+    padding: 13px 31px;
+
     color: #576b87; 
     border: 2px solid #576b87;
     background: transparent;
@@ -399,6 +450,7 @@ p
     border: 1px solid #c1c1be;
     -webkit-border-radius: 2px;
             border-radius: 2px;
+    background: #fff;
 }
 .custom-input .new-input:before
 {
@@ -456,7 +508,8 @@ p
 {
     position: relative;
 
-    max-width: 500px;
+    width: 100%;
+    max-width: 365px;
     margin-bottom: 15px;
     padding-top: 18px;
 }
@@ -482,6 +535,25 @@ p
 {
     position: static;
 }
+.input-wrapper.input-select:after
+{
+    position: absolute;
+    right: 1px; 
+    bottom: 13px;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border-top: 5px solid #cf1613;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.input-wrapper:hover:after
+{
+    border-top-color: #6f0d0c;
+}
 
 .input-title
 {
@@ -490,7 +562,7 @@ p
 
     display: block;
 
-    margin-bottom: 5px; 
+    margin-bottom: 3px; 
 
     color: #6d6e71;
 }
@@ -500,8 +572,7 @@ p
     font-size: 14px;
     line-height: 1;
 
-    width: 100%;
-    max-width: 365px; 
+    width: 100%; 
     padding: 5px 0;
 
     border: none;
@@ -521,8 +592,10 @@ p
 /* -------- NICE SELECT --------- */
 .nice-select
 {
+    float: none; 
+
     width: 100%;
-    max-width: 365px; 
+    max-width: 365px;
     height: 30px;
     padding: 0;
 
@@ -535,8 +608,18 @@ p
 {
     display: none;
 }
+.nice-select > span
+{
+    line-height: 28px; 
+
+    display: block;
+
+    height: 100%;
+}
 .nice-select .list
 {
+    top: calc(100% + 2px); 
+
     width: 100%;
     height: 0;
     margin: 0;
@@ -550,9 +633,423 @@ p
 {
     height: auto;
 }
+.nice-select .option
+{
+    font-family: 'proxima_novalight_italic', sans-serif;
+    line-height: 32px;
+
+    min-height: 32px; 
+
+    color: #c3c3c3;
+}
+.nice-select .option:hover
+{
+    color: #696969;
+}
+.nice-select .option.disabled
+{
+    height: 0;
+    min-height: 0;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus
+{
+    background: #fff;
+}
 
 /* -------- END NICE SELECT --------- */
+.custom-table
+{
+    font-size: 14px;
+    line-height: 1;
+
+    margin-bottom: 40px;
+}
+.custom-table .nice-select
+{
+    width: 85px;
+    height: 25px;
+}
+.custom-table .input-wrapper
+{
+    max-width: 85px; 
+    margin: 0;
+}
+.custom-table .input-wrapper.input-select:after
+{
+    bottom: 10px;
+}
+.custom-table .custom-input
+{
+    height: 22px;
+    margin: 0; 
+    padding-left: 20px;
+}
+
+.custom-table-row
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin-bottom: 5px;
+
+    -webkit-transition: -webkit-box-shadow .3s;
+         -o-transition:         box-shadow .3s;
+            transition: -webkit-box-shadow .3s;
+            transition:         box-shadow .3s;
+            transition:         box-shadow .3s, -webkit-box-shadow .3s; 
+
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background: #fff;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.custom-table-row.title-row
+{
+    font-family: 'proxima_novabold', sans-serif;
+}
+.custom-table-row:last-child
+{
+    margin-bottom: 0;
+}
+.custom-table-row .custom-table-cell
+{
+    width: 20%;
+}
+.custom-table-row:hover
+{
+    -webkit-box-shadow: 6px 6px 16px rgba(0, 0, 0, .07);
+            box-shadow: 6px 6px 16px rgba(0, 0, 0, .07);
+}
+
+.project-table .custom-table-cell:nth-child(1)
+{
+    width: 4%;
+    min-width: 50px;
+}
+
+.project-table .custom-table-cell:nth-child(2)
+{
+    width: 29%;
+
+    text-transform: uppercase;
+}
+
+.project-table .custom-table-cell:nth-child(3)
+{
+    width: 29%;
+}
+
+.custom-table-cell
+{
+    padding: 10px 15px;
+}
+
+.table-sort-btn
+{
+    position: relative; 
+
+    margin: 0;
+    padding: 0 17px 0 0;
+
+    text-transform: uppercase;
+
+    border: none;
+    background: none;
+}
+.table-sort-btn:after
+{
+    position: absolute;
+    right: 1px; 
+    bottom: 6px;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border-top: 5px solid #cf1613;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.projects-wrapper
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin-right: -15px;
+    margin-bottom: 35px; 
+    margin-left: -15px;
+
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+
+.project-item-wrapper
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column; 
+
+    width: 20%;
+    max-width: 202px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+}
+
+.project-item
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    min-height: 172px;
+    padding: 15px;
+
+    text-align: center; 
+
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background: #fff;
+
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+}
+.project-item .item-icon
+{
+    margin-bottom: 20px;
+}
+.project-item .item-icon img
+{
+    max-width: 100%;
+    max-height: 100%; 
+    margin: 0 auto;
+}
+.project-item .item-title
+{
+    font-family: 'proxima_novabold', sans-serif;
+    font-size: 18px;
+    line-height: 28px; 
+
+    display: block;
+}
+.project-item .item-text
+{
+    font-family: 'proxima_novalight_italic', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+
+.form-block
+{
+    padding: 30px; 
+
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background: #fff;
+}
+
+.double-input
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin-bottom: 30px;
+}
+.double-input .input-wrapper
+{
+    margin-bottom: 0;
+}
+.double-input .input-wrapper:first-child
+{
+    margin-right: 45px;
+}
+
+fieldset legend
+{
+    font-family: 'proxima_novabold', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-bottom: 20px;
+}
+
+.btn-row
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin-top: 35px; 
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.btn-row .btn
+{
+    margin-right: 15px;
+}
+.btn-row .btn:last-child
+{
+    margin-right: 0;
+}
+
+.required-star
+{
+    color: #d11515;
+}
+
 .footer
 {
     padding: 50px 0;
+}
+
+@media screen and (max-width: 991px)
+{
+    .project-table .custom-table-cell:nth-child(2)
+    {
+        width: 30%;
+    }
+    .project-table .custom-table-cell:nth-child(3)
+    {
+        width: 30%;
+    }
+    .project-table .custom-table-cell:nth-child(4)
+    {
+        width: 30%;
+    }
+    .project-item-wrapper
+    {
+        width: 25%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .project-table .custom-table-cell:nth-child(1)
+    {
+        width: 7%;
+    }
+    .project-item-wrapper
+    {
+        width: calc(100% / 3);
+    }
+    .double-input
+    {
+        display: block;
+    }
+    .double-input .input-wrapper
+    {
+        margin-bottom: 30px;
+    }
+    .double-input .input-wrapper:first-child
+    {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 575px)
+{
+    .project-table .custom-table-row
+    {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+    .project-table .custom-table-row.title-row
+    {
+        display: none;
+    }
+    .project-table .custom-table-cell
+    {
+        position: relative; 
+
+        margin-left: 100px;
+    }
+    .project-table .custom-table-cell:before
+    {
+        font-weight: 600; 
+
+        position: absolute;
+        top: 0;
+        left: -100px;
+
+        width: 100px;
+        height: 100%;
+        padding: 10px 15px;
+
+        content: attr(data-cell);
+    }
+    .project-table .custom-table-cell:nth-child(1)
+    {
+        width: 100%;
+    }
+    .project-table .custom-table-cell:nth-child(2)
+    {
+        width: 100%;
+    }
+    .project-table .custom-table-cell:nth-child(3)
+    {
+        width: 100%;
+    }
+    .project-table .custom-table-cell:nth-child(4)
+    {
+        width: 100%;
+    }
+    .project-item-wrapper
+    {
+        width: 50%;
+    }
+    .form-block
+    {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 374px)
+{
+    .project-item-wrapper
+    {
+        width: 100%;
+    }
 }

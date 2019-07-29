@@ -1,0 +1,91 @@
+@media screen and (max-width: 991px) {
+  .project-table {
+    .custom-table-cell {
+      &:nth-child(2) {
+        width: 30%;
+      }
+
+      &:nth-child(3) {
+        width: 30%;
+      }
+
+      &:nth-child(4) {
+        width: 30%;
+      }
+    }
+  }
+  .project-item-wrapper {
+    width: 25%;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-table {
+    .custom-table-cell {
+      &:nth-child(1) {
+        width: 7%;
+      }
+    }
+  }
+  .project-item-wrapper {
+    width: calc(100% / 3);
+  }
+  .double-input {
+    display: block;
+    .input-wrapper {
+      margin-bottom: 30px;
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .project-table {
+    .custom-table-row {
+      flex-wrap: wrap;
+      &.title-row {
+        display: none;
+      }
+    }
+    .custom-table-cell {
+      margin-left: 100px;
+      position: relative;
+      &:before {
+        content: attr(data-cell);
+        position: absolute;
+        top: 0;
+        left: -100px;
+        width: 100px;
+        height: 100%;
+        padding: 10px 15px;
+        font-weight: 600;
+      }
+      &:nth-child(1) {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        width: 100%;
+      }
+      &:nth-child(3) {
+        width: 100%;
+      }
+      &:nth-child(4) {
+        width: 100%;
+      }
+    }
+  }
+  .project-item-wrapper {
+    width: 50%;
+  }
+  .form-block {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .project-item-wrapper {
+    width: 100%;
+  }
+}

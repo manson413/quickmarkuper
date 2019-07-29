@@ -55,27 +55,44 @@ ul {
   overflow: hidden;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h4, h5 {
   font-family: 'proxima_novabold', sans-serif;
+  margin-top: 0;
 }
 b, strong {
   font-family: 'proxima_novabold', sans-serif;
 }
 
 h1 {
-
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 h2 {
-
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 20px;
 }
 h3 {
-
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 12px;
 }
 h4 {
-
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 12px;
 }
 h5 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
 
+.section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 p {
@@ -83,7 +100,7 @@ p {
 }
 
 .container {
-  max-width: 1246px;
+  max-width: 1010px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -114,6 +131,7 @@ p {
     }
   }
   &.transparent-btn {
+    padding: 13px 31px;
     background: transparent;
     border: 2px solid #576b87;
     color: #576b87;
@@ -146,6 +164,7 @@ p {
     left: 0;
     width: 20px;
     height: 20px;
+    background: #fff;
     border: 1px solid $grey-color;
     border-radius: 2px;
     transition: all .3s;
@@ -191,7 +210,8 @@ p {
 }
 
 .input-wrapper {
-  max-width: 500px;
+  width: 100%;
+  max-width: 365px;
   margin-bottom: 15px;
   position: relative;
   padding-top: 18px;
@@ -213,6 +233,22 @@ p {
     .input-title {
       position: static;
     }
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid #cf1613;
+      position: absolute;
+      bottom: 13px;
+      right: 1px;
+    }
+  }
+  &:hover {
+    &:after {
+      border-top-color: #6f0d0c;
+    }
   }
 }
 .input-title {
@@ -220,7 +256,7 @@ p {
   font-size: 14px;
   line-height: 16px;
   color: #6d6e71;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 .border-input {
   font-size: 14px;
@@ -229,7 +265,6 @@ p {
   border: none;
   border-bottom: 2px solid #ddd;
   width: 100%;
-  max-width: 365px;
   &:focus {
     outline: none;
     border-color: #c3c3c3;
@@ -250,8 +285,14 @@ p {
   height: 30px;
   width: 100%;
   max-width: 365px;
+  float: none;
   &:after {
     display: none;
+  }
+  &>span {
+    display: block;
+    height: 100%;
+    line-height: 28px;
   }
   .list {
     width: 100%;
@@ -259,19 +300,204 @@ p {
     list-style: none;
     margin: 0;
     border-radius: 0;
+    top: calc(100% + 2px);
   }
   &.open {
     .list {
       height: auto;
     }
   }
+  .option {
+    color: #c3c3c3;
+    font-family: 'proxima_novalight_italic', sans-serif;
+    line-height: 32px;
+    min-height: 32px;
+    &:hover {
+      color: #696969;
+    }
+  }
+  .option.disabled {
+    height: 0;
+    min-height: 0;
+  }
+}
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+  background: #fff;
 }
 
 /* -------- END NICE SELECT --------- */
+.custom-table {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 40px;
+  .nice-select {
+    width: 85px;
+    height: 25px;
+  }
+  .input-wrapper {
+    margin: 0;
+    max-width: 85px;
+    &.input-select:after {
+      bottom: 10px;
+    }
+  }
+  .custom-input {
+    height: 22px;
+    padding-left: 20px;
+    margin: 0;
+  }
+}
+.custom-table-row {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: box-shadow .3s;
+  &.title-row {
+    font-family: 'proxima_novabold', sans-serif;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .custom-table-cell {
+    width: 20%;
+  }
+  &:hover {
+    box-shadow: 6px 6px 16px rgba(0,0,0, .07);
+  }
+}
+.project-table {
+  .custom-table-cell {
+    &:nth-child(1) {
+      width: 4%;
+      min-width: 50px;
+    }
+    &:nth-child(2) {
+      width: 29%;
+      text-transform: uppercase;
+    }
+    &:nth-child(3) {
+      width: 29%;
+    }
+  }
+}
+.custom-table-cell {
+  padding: 10px 15px;
+}
+.table-sort-btn {
+  background: none;
+  border: none;
+  padding: 0 17px 0 0;
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #cf1613;
+    position: absolute;
+    bottom: 6px;
+    right: 1px;
+  }
+}
 
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 35px;
+}
+.project-item-wrapper {
+  width: 20%;
+  max-width: 202px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.project-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 172px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  .item-icon {
+    margin-bottom: 20px;
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .item-title {
+    display: block;
+    font-family: 'proxima_novabold', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .item-text {
+    font-family: 'proxima_novalight_italic', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    flex-grow: 1;
+  }
+}
+
+.form-block {
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.double-input {
+  display: flex;
+  margin-bottom: 30px;
+  .input-wrapper {
+    margin-bottom: 0;
+    &:first-child {
+      margin-right: 45px;
+    }
+  }
+}
+fieldset {
+  legend {
+    font-family: 'proxima_novabold', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+.btn-row {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  .btn {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.required-star {
+  color: $red-color;
+}
 .footer {
   padding: 50px 0;
 }
+
+@import "media";
+
+
 //table height 45, margin 5
 //shadow http://prntscr.com/ojq119
 //http://prntscr.com/ojq1v4
